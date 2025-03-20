@@ -52,8 +52,6 @@ export const CoordinateComp = (props: ICoordinateProps) => {
     const AddHandler = () => {
       if( lat.length > 0 && long.length > 0) {
         if (/^-?\d+(\.\d+)?$/.test(lat) && /^-?\d+(\.\d+)?$/.test(long)) {
-          // console.log("Latitude:", lat);
-          // console.log("Longitude:", long);
             if (parseFloat(parseFloat(lat).toFixed(2)) > 90.00 || parseFloat(parseFloat(lat).toFixed(2)) < -90.00)
             {
               setAlertMessage('Latitude must be within the range of -90.00 to 90.00 degrees.');
